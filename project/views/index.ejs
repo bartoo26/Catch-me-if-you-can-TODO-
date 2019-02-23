@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Projekt 5</title>
+        <meta name="viewport" content="initial-scale=1.0">
+        <meta charset="utf-8">
+        <style>
+            html, body {
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            #wrapper {
+            	height: 500px;
+                width:1000px;
+                position: relative;
+                top: calc(50% - 250px);
+                left: calc(50% - 500px);
+            }
+            #map {
+                height: 500px;
+                width:500px;
+                float: left;
+            }
+            #chat {
+                height: 500px;
+                width:500px;
+            	float:right;
+            	overflow-y: scroll;
+            }
+            .container {
+  				border: 2px solid #dedede;
+  				background-color: #f1f1f1;
+  				border-radius: 5px;
+ 				padding: 10px;
+  				margin: 10px 0;
+			}
+
+			.container::after {
+  				content: "";
+  				clear: both;
+  				display: table;
+			}
+			#msg {
+				width:100%;
+				height: 30px;
+			}
+        </style>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAawABvA4Qu__y4BSFbGDXgy2kPshIGDkc&callback=init" async defer></script>
+        <script src="javascripts/jquery.js" async defer></script>
+        <script src="javascripts/main.js"></script>
+    </head>
+    <body>
+    	<div id="wrapper">
+        	<div id="map"></div>
+        	<div id="chat">        	
+        		<div id="chat-message">
+        			<input id="msg" type="text">
+        			<button onclick="send()">Send</button>
+        		</div>
+        	</div>
+        <div>
+    </body>
+</html>
